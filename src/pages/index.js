@@ -8,8 +8,8 @@ export default function Home() {
         <li><Link to="/about/">About</Link></li>
         <li><Link to="/contact/">Contact</Link></li>
       </ul>
-      <h1>Hello Gatsby!</h1>
-      <p>this is the test site for the tutorial</p>
+      <h1>Hi, I'm Ethan</h1>
+      <p>Welcome to my home on the web</p>
       <img src="https://source.unsplash.com/random/400x200" alt="" />
     </div>
   )

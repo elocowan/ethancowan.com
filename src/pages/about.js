@@ -5,8 +5,7 @@ import {Link} from 'gatsby';
 export default function About() {
   return (
     <div>
-      <Header headerText="About Gatsby" />
-      <Header headerText="another header" />
+      <Header headerText="Hi, I'm Ethan" />
       <Link to="/">Home</Link>
     </div>
   )
