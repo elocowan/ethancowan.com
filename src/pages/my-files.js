@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
 export default function MySites({ data }) {
-  console.log(data)
   return (
     <div>
       <Layout>
