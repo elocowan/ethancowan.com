@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Ethan Cowan`,
+    description: `A personal website and blog about Somatics in the age of the internet. Includes information about the Feldenkrais Method.`
   },
   plugins: [
     {
@@ -11,6 +12,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {

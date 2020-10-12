@@ -3,7 +3,6 @@ import Layout from "../components/layout"
 import { Link, graphql } from "gatsby"
 
 export default function Blog({ data }) {
-  console.log(data);
   return (
     <Layout>
       {data.allMarkdownRemark.edges.map(({ node }) => (
