@@ -6,7 +6,6 @@ import PostPreview from '../components/post-preview'
 export default () => {
   const posts = usePosts()
 
-  console.log(posts)
   return (
     <Layout>
       <h1>Blog</h1>
