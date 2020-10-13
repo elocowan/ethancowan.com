@@ -1,44 +1,18 @@
 import React from "react"
 import Layout from "../components/layout"
-import { Link, graphql } from "gatsby"
+import usePosts from "../hooks/use-posts"
+import PostPreview from '../components/post-preview'
 
-export default function Blog({ data }) {
+export default () => {
+  const posts = usePosts()
+
+  console.log(posts)
   return (
     <Layout>
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div key={node.frontmatter.title}>
-          <h3>
-            <Link to={node.fields.slug}>
-              <h3>{node.frontmatter.title} </h3>
-            </Link>
-            <span> — {node.frontmatter.date}</span>
-          </h3>
-          <p>{node.excerpt}</p>
-        </div>
+      <h1>Blog</h1>
+      {posts.map(post => (
+        <PostPreview key={post.slug} post={post} />
       ))}
     </Layout>
   )
 }
-
-export const query = graphql`
-  query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          tableOfContents
-          timeToRead
-          internal {
-            content
-          }
-          frontmatter {
-            title
-            date
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    }
-  }
-`

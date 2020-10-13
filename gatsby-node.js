@@ -1,42 +1,32 @@
-const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+// actions, graphql and reporter are things that gatsby provides for use
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions
-  if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages` })
-    createNodeField({
-      node,
-      name: `slug`,
-      value: slug,
-    })
-  }
-}
-
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+exports.createPages = async ({ actions, graphql, reporter }) => {
+  // in node, graphql is a function call, whereas in react, graphql is a template literal
   const result = await graphql(`
     query {
-      allMarkdownRemark {
-        edges {
-          node {
-            fields {
-              slug
-            }
+      allMdx {
+        nodes {
+          frontmatter {
+            slug
           }
         }
       }
     }
   `)
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.fields.slug,
-      component: path.resolve(`./src/templates/blog-post.js`),
+
+  if (result.errors) {
+    reporter.panic('failed to create posts', result.errors)
+  }
+
+  const posts = result.data.allMdx.nodes;
+
+  posts.forEach(post => {
+    actions.createPage({
+      path: post.frontmatter.slug,
+      component: require.resolve(`./src/templates/post.js`),
       context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
-        slug: node.fields.slug,
-      },
+        slug: post.frontmatter.slug
+      }
     })
   })
 }
