@@ -8,9 +8,9 @@ export default function Home() {
   query MyQuery {
     file(relativePath: {eq: "front-smile.jpg"}) {
       name
-      childImageSharp {
+      sharp: childImageSharp {
         fixed {
-          ...GatsbyImageSharpFixed
+          ...GatsbyImageSharpFixed_withWebp
         }
       }
     }
@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <Layout>
       <h1>Hi, I'm Ethan</h1>
-      <Img fixed={data.file.childImageSharp.fixed} />
+      <Img fixed={data.file.sharp.fixed} />
       <p>Welcome to my home on the web.</p>
     </Layout>
   )
