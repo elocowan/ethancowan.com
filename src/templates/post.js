@@ -11,6 +11,11 @@ export const query = graphql`
         date(formatString: "MMMM DD, YYYY")
       }
       body
+      headings {
+        depth
+        value
+      }
+      timeToRead
     }
   }
 `
@@ -19,8 +24,8 @@ const PostTemplate = ({ data: { mdx: post } }) => {
   return (
     <Layout>
       <h1>{post.frontmatter.title}</h1>
-      <p style={{ fontSize: "0.75rem" }}>{post.frontmatter.date}</p>
-      <MDXRenderer>{post.body}</MDXRenderer>
+      <p style={{ fontSize: "0.75rem" }}>{post.frontmatter.date} - {post.timeToRead} minutes to read</p>
+      <MDXRenderer headings={post.headings}>{post.body}</MDXRenderer>
       <Link to="/blog">&larr; back to all posts</Link>
     </Layout>
   )
