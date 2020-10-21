@@ -2,7 +2,6 @@ import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import React from "react"
 import styled from "styled-components"
-// import { H1, H2, P } from '../components/page-elements'
 const Toc = styled.ul`
   position: fixed;
   left: calc(50% + 400px);
@@ -47,7 +46,7 @@ export const query = graphql`
     mdx(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
-        date(formatString: "YYYY MMMM Do")
+        date(formatString: "MMMM DD, YYYY")
       }
       body
       excerpt
