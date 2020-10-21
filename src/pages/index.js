@@ -16,7 +16,7 @@ export default function Home() {
     }
   }
   `)
-  console.log(data)
+
   return (
     <Layout>
       <h1>Hi, I'm Ethan</h1>
