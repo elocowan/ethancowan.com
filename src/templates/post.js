@@ -15,7 +15,11 @@ export const query = graphql`
         depth
         value
       }
+      tableOfContents
       timeToRead
+      fields {
+        slug
+      }
     }
   }
 `
@@ -25,7 +29,7 @@ const PostTemplate = ({ data: { mdx: post } }) => {
     <Layout>
       <h1>{post.frontmatter.title}</h1>
       <p style={{ fontSize: "0.75rem" }}>{post.frontmatter.date} - {post.timeToRead} minutes to read</p>
-      <MDXRenderer headings={post.headings}>{post.body}</MDXRenderer>
+      <MDXRenderer data={post}>{post.body}</MDXRenderer>
       <Link to="/blog">&larr; back to all posts</Link>
     </Layout>
   )
