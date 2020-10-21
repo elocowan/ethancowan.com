@@ -23,7 +23,7 @@ export default function Contact() {
         <h1>Let's be in touch</h1>
         <Img fixed={data.file.sharp.fixed} />
         <p style={{marginTop: "10px"}}>
-          The best way to reach me right now is on Twitter (
+          Feel free to reach out or say hi on Twitter (
           <a href="https://twitter.com/elocowan">@elocowan</a>).
         </p>
         <p>
