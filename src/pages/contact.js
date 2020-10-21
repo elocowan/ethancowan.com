@@ -27,7 +27,7 @@ export default function Contact() {
           <a href="https://twitter.com/elocowan">@elocowan</a>).
         </p>
         <p>
-          If you'd like to talk with me about doing Feldenkrais work over zoom,
+          If you'd like to talk with me about doing Feldenkrais over zoom,
           please schedule a time{" "}
           <a href="https://app.acuityscheduling.com/schedule.php?owner=16756071">
             here
