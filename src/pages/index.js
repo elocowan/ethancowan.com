@@ -41,8 +41,7 @@ export default function Home() {
         <StyledImg fixed={data.file.sharp.fixed} />
       </Wrapper>
       <Centered>
-        How can somatics increase choice and decrease compulsion in the 21st
-        century?
+        How do people move through life? How does life move through people?
       </Centered>
       <h3>Hi, I'm Ethan</h3>
       <p>
