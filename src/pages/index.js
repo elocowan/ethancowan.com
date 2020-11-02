@@ -17,7 +17,6 @@ const Wrapper = styled.figure`
 `
 const Centered = styled.p`
   font-size: 30px;
-  margin-top: 30px;
   text-align: center;
 `
 
@@ -41,7 +40,8 @@ export default function Home() {
         <StyledImg fixed={data.file.sharp.fixed} />
       </Wrapper>
       <Centered>
-        How do people move through life? How does life move through people?
+        How do people move through life? <br />
+        How does life move through people?
       </Centered>
       <h3>Hi, I'm Ethan</h3>
       <p>
@@ -68,7 +68,8 @@ export default function Home() {
         administrator for a computer company and my mother ran her own
         commercial interior design firm. We moved to Boulder, CO in 1995 because
         my parents were burnt out by the work culture of Silicon Valley. As a
-        young person, I was passionate about gymnastics, skateboarding and music.
+        young person, I was passionate about gymnastics, skateboarding and
+        music.
       </p>
       <p>
         I got a liberal education from Oberlin College between 2003-2007. My
