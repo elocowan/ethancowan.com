@@ -59,7 +59,7 @@ export default function Home() {
         compulsion in the modern world.
       </p>
       <hr />
-      <h3>What folks have been saying about working with me:</h3>
+      <h3>What folks are saying:</h3>
       <p>
         <b>Sasha</b>
         <br />
