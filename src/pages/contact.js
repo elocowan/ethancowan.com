@@ -22,15 +22,14 @@ export default function Contact() {
       <Layout>
         <h1>Let's be in touch</h1>
         <Img fixed={data.file.sharp.fixed} />
-        <p style={{marginTop: "10px"}}>
+        <p style={{ marginTop: "10px" }}>
           Feel free to reach out or say hi on Twitter (
           <a href="https://twitter.com/elocowan">@elocowan</a>).
         </p>
         <p>
-          If you'd like to talk with me about doing Feldenkrais over zoom,
-          please schedule a time{" "}
+          If you'd like to talk about working together, please{" "}
           <a href="https://app.acuityscheduling.com/schedule.php?owner=16756071">
-            here
+            schedule an intro call
           </a>
           .
         </p>

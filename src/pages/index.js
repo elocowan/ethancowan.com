@@ -45,12 +45,12 @@ export default function Home() {
       </Centered>
       <h3>Hi, I'm Ethan</h3>
       <p>
-        I give Feldenkrais lessons over zoom using a{" "}
+        I give Feldenkrais lessons using a{" "}
         <Link to="/transparent-generosity">transparent generosity</Link> model.
-        If you'd like to talk to me about working together, please schedule an
-        intro call{" "}
+        During COVID19, I am teaching over zoom. If you'd like to talk about
+        working together, please{" "}
         <a href="https://app.acuityscheduling.com/schedule.php?owner=16756071">
-          here
+          schedule an intro call
         </a>
         .
       </p>
@@ -58,10 +58,24 @@ export default function Home() {
         My mission is to help Somatic Education increase choice and decrease
         compulsion in the modern world.
       </p>
+      <hr />
+      <h3>What folks have been saying about working with me:</h3>
       <p>
-        I write about somatics, liberal education, early childhood development
-        and more.
+        <b>Sasha</b>
+        <br />
+        "One of my biggest challenges is being very speedy, and constantly
+        rushing in my body. So having the experience of, for an hour, slowing
+        things so much. It leaves a tail of me being able to do that more during
+        the week."
       </p>
+      <p>
+        <b>Emma</b>
+        <br />
+        "The biggest overall thing is finding this sense of my body making sense
+        of things, my nervous system making sense of things without there being
+        a cognitive explanation."
+      </p>
+      <hr />
       <h3>My timeline</h3>
       <p>
         I was born in Menlo Park, CA in 1985. My father worked as a systems
@@ -97,7 +111,6 @@ export default function Home() {
         </a>
         .
       </p>
-
       <p>
         In 2013, I moved back to Boulder to live close to my family, where I've
         lived ever since.
