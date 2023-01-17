@@ -1,1 +1,16 @@
-## Healer Blog Post
+---
+title: Healer Type
+slug: healer-type
+author: Ethan Cowan
+date: 2023-01-17
+---
+
+import TableOfContents from '../../src/components/table-of-contents'
+
+<TableOfContents data={props} />
+
+I'm making some new connections based on my experiences of the past couple years.
+
+## Healer Type
+
+This is where I'll write about all this stuff
